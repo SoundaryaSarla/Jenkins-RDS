@@ -1,7 +1,7 @@
 import psycopg2
 import boto3
 s3 = boto3.resource('s3')
-key = 'load/part-csv.tbl-000.csv'
+key = 'load/part-csv.tbl-000'
 conn = psycopg2.connect(
     host="redshift-jenkins.cpiazh88ds78.us-east-1.redshift.amazonaws.com",
     database="dev",
