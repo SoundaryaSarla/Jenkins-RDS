@@ -8,7 +8,6 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 print("connection succussfully established")
 cur.execute("select city from users")
-cur.execute("DROP TABLE listing")
 print(cur.fetchall())
 print(".........")
 print()
