@@ -1,4 +1,5 @@
 import psycopg2
+s3 = boto3.resource('s3')
 conn = psycopg2.connect(
     host="redshift-jenkins.cpiazh88ds78.us-east-1.redshift.amazonaws.com",
     database="dev",
