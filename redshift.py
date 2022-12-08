@@ -23,7 +23,8 @@ with open('/tmp/test.csv', 'r') as f:
 # Notice that we don't need the `csv` module
     next(f) # Skip the header row.
     #cursor.execute("SET search_path = geagp_cdoo_healthcheck, public;")
-    cur.copy_from(f, 'dev.part', sep=',')
+    cur.execute("SET search_path = dev, public;")
+    cur.copy_from(f, 'part', sep=',')
 #cursor.execute("\copy dev.part from '/tmp/test.csv' with delimiter ',' ;")
 cur.execute("select count(*) from dev.part;")
 print("table count after load")
