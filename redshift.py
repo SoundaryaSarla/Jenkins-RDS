@@ -7,7 +7,7 @@ conn = psycopg2.connect(
     password="Admin12345")
 cur = conn.cursor()
 print("connection succussfully established")
-cur.execute("select City from Persons")
+cur.execute("select city from users")
 print(cur.fetchall())
 print(".........")
 print()
